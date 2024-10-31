@@ -45,7 +45,7 @@ target="_blank" permet d'ouvrir un lien dans un nouvel onglet
 
 ```html
 <img src="https://www.example.com/image.jpg" alt="Description de l'image" width="300" height="200">
-<!-- Pas la meilleure pratique pour changer une largeur et un hauteur -->
+<!-- Pas la meilleure pratique pour changer une largeur et une hauteur -->
 ```
 
 ### 5. **Listes (ordonnées et non ordonnées)**
@@ -380,33 +380,6 @@ HTML associé :
 </div>
 ```
 
-### 9. **Animations en CSS**
-
-CSS permet aussi de créer des animations simples.
-
-
-```css
-@keyframes bounce {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-30px); }
-    100% { transform: translateY(0); }
-}
-
-.animated {
-    animation: bounce 2s infinite;
-}
-
-```
-
-HTML associé :
-
-
-```html
-<div class="animated">Je saute !</div>
-```
-
-Ces exemples te donnent une base solide pour commencer à utiliser CSS et à styliser tes pages
-
 # CSS Notions plus complexes
 
 ### 1. **Utilisation de `calc()` pour les calculs dynamiques**
@@ -481,34 +454,6 @@ Ces sélecteurs te permettent de cibler des éléments en fonction de leur posit
 
 Les variables CSS te permettent de définir des valeurs réutilisables, ce qui facilite la gestion des couleurs, des tailles ou autres propriétés.
 
-
-```css
-:root {
-    --main-bg-color: #e0f7fa;
-    --main-text-color: #00695c;
-    --padding: 20px;
-}
-
-body {
-    background-color: var(--main-bg-color);
-    color: var(--main-text-color);
-    padding: var(--padding);
-}
-
-h1 {
-    color: var(--main-text-color);
-    padding-bottom: var(--padding);
-}
-```
-
-#### HTML associé :
-
-
-```html
-<h1>Bienvenue dans la page avec des variables CSS</h1>
-<p>Ceci est un exemple utilisant des variables CSS.</p>
-```
-
 ### 4. **Sélecteurs de pseudo-éléments (`::before` et `::after`)**
 
 Les pseudo-éléments te permettent d’ajouter du contenu avant ou après un élément sans modifier le HTML.
@@ -526,6 +471,10 @@ h1::after {
 }
 ```
 
+Code ASCII pour les flèches : 
+
+`→` : alt + 26
+`←` : alt + 27
 #### HTML associé :
 
 
@@ -560,73 +509,7 @@ h1 ~ p {
 <p>Ce paragraphe est aussi affecté car il est un frère de h1.</p>
 ```
 
-### 6. **Média queries pour le design réactif**
-
-Les media queries permettent d’adapter le style selon la taille de l’écran, pour des conceptions réactives (responsive design).
-
-
-```css
-body {
-    font-size: 16px;
-}
-
-@media (max-width: 600px) {
-    body {
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 600px) {
-    body {
-        font-size: 18px;
-    }
-}
-```
-
-#### HTML associé :
-
-
-```html
-<p>Ce texte change de taille selon la taille de l'écran.</p>
-```
-
-### 7. **CSS Grid avancé**
-
-Le système Grid permet de créer des mises en page complexes facilement.
-
-
-```css
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-}
-
-.box {
-    background-color: #66ccff;
-    padding: 20px;
-    text-align: center;
-    color: white;
-}
-
-.box:nth-child(1) {
-    grid-column: span 2; /* Cette boîte s'étend sur deux colonnes */
-}
-```
-
-#### HTML associé :
-
-
-```html
-<div class="container">
-    <div class="box">Boîte 1</div>
-    <div class="box">Boîte 2</div>
-    <div class="box">Boîte 3</div>
-    <div class="box">Boîte 4</div>
-</div>
-```
-
-### 8. **Transformations et transitions CSS**
+### 6. **Transformations et transitions CSS**
 
 Les transformations permettent de manipuler visuellement les éléments (rotation, échelle, déplacement), et les transitions permettent d’ajouter des animations lors du changement de propriétés.
 
@@ -650,41 +533,6 @@ Les transformations permettent de manipuler visuellement les éléments (rotatio
 ```html
 <div class="box">Survole-moi !</div>
 ```
-
-### 9. **Grille complexe avec auto-fit et minmax()**
-
-L’utilisation de `minmax()` et `auto-fit` permet de créer des grilles dynamiques qui s’adaptent automatiquement à la taille de l’écran.
-
-
-```css
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 10px;
-}
-
-.box {
-    background-color: #66ccff;
-    padding: 20px;
-    text-align: center;
-    color: white;
-}
-```
-
-#### HTML associé :
-
-
-```html
-<div class="container">
-    <div class="box">Boîte 1</div>
-    <div class="box">Boîte 2</div>
-    <div class="box">Boîte 3</div>
-    <div class="box">Boîte 4</div>
-    <div class="box">Boîte 5</div>
-</div>
-```
-
-Ces exemples montrent des fonctionnalités CSS avancées qui te permettront de mieux gérer la mise en page, les animations, et les styles dynamiques, tout en utilisant des outils modernes comme les variables CSS, les pseudo-éléments, les transformations, et les grilles complexes.
 
 # Exercices
 
@@ -718,7 +566,5 @@ Avec ce code html :
 9. Changer la couleur de fond du site
 10. Centrer le paragraphe
 11. Ajouter une bordure sur le titre avec une marge intérieure
-
-## Intermédiaire
-
-exe_1_html_css
+12. Faire en sorte de faire grossir le titre au passage de la souris
+13. Effacer ce que contient votre body et placer 4 paragraphes et faites en sorte que les éléments pair soient coloré en rouge et les impairs en vert
